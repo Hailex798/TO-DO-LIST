@@ -8,7 +8,7 @@
 body {
   background: #fc6602;
   color: hsl(200, 100%, 90%);
-  max-width: 400px;
+  max-width: 480px;
   /* padding: 1rem; */
   margin: 0 auto;
 }
@@ -16,7 +16,7 @@ body {
   font-family: 'Oswald', sans-serif;
   text-align: center;
   color: #fbe5b8;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .nav hr{
   border: 1px solid #fbe5b8;
@@ -38,9 +38,10 @@ body {
   background: #1f1f1f;
   border: 1px solid #fbe5b8;
   color: #fbe5b8;
-  padding: 0.25em 0.5em;
+  padding: 0.30em 0.5em;
   border-radius: 0.25em;
   cursor: pointer;
+  font-size: 1em;
   outline: none;
 }
 
@@ -65,13 +66,13 @@ body {
   border: 1px solid #fbe5b8;
   background: hsl(0, 0%, 0%);
   border-radius: 0.25em;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 0.5em;
   margin-bottom: 2px;
   color: hsl(200, 100%, 90%);
 }
 .new-item-form label{
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.8em;
   font-family: 'Oswald', sans-serif;
   font-weight: 400;
   margin: 6px 0;
@@ -129,7 +130,7 @@ body {
 .list li label{
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 
 .list li label::before {
