@@ -1,8 +1,9 @@
 import React from "react"
+import edit from '/images/edit-icon.png'
 
 export default function List(props){
     function editClick(e){
-        
+
     }
     const elements = props.todo.map(x =>
         <li>
@@ -12,7 +13,7 @@ export default function List(props){
             </label>
             <div className="list--icons">
                 <img
-                src="../images/edit-icon.png"
+                src={edit}
                 alt="edit-icon"
                 onClick={() => editClick(x)}
                 />
