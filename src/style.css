@@ -8,7 +8,7 @@
 body {
   background: #fc6602;
   color: hsl(200, 100%, 90%);
-  max-width: 480px;
+  max-width: 580px;
   /* padding: 1rem; */
   margin: 0 auto;
 }
@@ -132,7 +132,15 @@ body {
   font-weight: 300;
   font-size: 1.4em;
 }
-
+.list--icons{
+  display: flex;
+  align-items: center;
+  width: 6.5em;
+  justify-content: space-between;
+}
+.list li img{
+  height: 1.7em;
+}
 .list li label::before {
   content: "";
   display: block;

@@ -1,13 +1,23 @@
 import React from "react"
 
 export default function List(props){
+    function editClick(e){
+        
+    }
     const elements = props.todo.map(x =>
         <li>
             <label>
                 <input type="checkbox"/>
                 {x}
             </label>
-            <button onClick={() => toRemove(x)}className="btn btn-danger">Delete</button>
+            <div className="list--icons">
+                <img
+                src="../images/edit-icon.png"
+                alt="edit-icon"
+                onClick={() => editClick(x)}
+                />
+                <button onClick={() => toRemove(x)}className="btn btn-danger">Delete</button>
+            </div>
         </li>
     )
     return (
