@@ -1,23 +1,26 @@
 import React from "react"
-import edit from '/images/edit-icon.png'
+import editIcon from '/images/edit-icon.png'
 
 export default function List(props){
-    function editClick(e){
-
+    function editClick(val){
+        props.setInput(val.name)
+        // Or just use .find method to find the object 
+        props.setToggleSubmit(true)
+        props.setEdit(val.id)
     }
     const elements = props.todo.map(x =>
         <li>
             <label>
                 <input type="checkbox"/>
-                {x}
+                {x.name}
             </label>
             <div className="list--icons">
                 <img
-                src={edit}
+                src={editIcon}
                 alt="edit-icon"
                 onClick={() => editClick(x)}
                 />
-                <button onClick={() => toRemove(x)}className="btn btn-danger">Delete</button>
+                <button onClick={() => toRemove(x.id)}className="btn btn-danger">Delete</button>
             </div>
         </li>
     )
@@ -26,9 +29,9 @@ export default function List(props){
             {elements}
         </ul>
     )
-    function toRemove(item){
+    function toRemove(key){
         const val7 = props.todo.filter((x) => 
-        {return x !== item}
+        {return x.id !== key}
         )
         props.setTodo(val7)
     }

@@ -1,21 +1,36 @@
 import React from "react"
 
 export default function NewItem(props){
-    const [input, setInput] = React.useState("")
     function handleSubmit(e){
         e.preventDefault()
-        if(input !== ""){
+        if(props.input === ""){
+            alert("Please Add a Task")
+        }
+        else if(props.input && props.toggleSubmit){
+            const inputData = props.todo.map((ele) =>{
+                if(props.edit === ele.id){
+                    return {...ele, name: props.input}
+                }
+                return ele
+            })
+            props.setTodo(inputData)
+        }
+        else{
+            const inputData = {name: props.input, id: new Date().getTime().toString()}
             props.setTodo(prev => {
                 return [
                     ...prev,
-                    input
+                    inputData
                 ]
             })
         }
-        setInput("")
+        props.setInput("")
+        props.setToggleSubmit(prev => {
+            if(prev) return false;
+        })
     }
     function handleChange(e){
-        setInput(e.target.value)
+        props.setInput(e.target.value)
     }
     
     return (
@@ -25,10 +40,10 @@ export default function NewItem(props){
                 <input
                 type="text"
                 id="item"
-                value={input}
+                value={props.input}
                 onChange={handleChange} />
             </div>
-            <button className="btn">Add</button>
+            <button className="btn">{props.toggleSubmit ? "Edit" : "Add"}</button>
         </form>
     )
 }
