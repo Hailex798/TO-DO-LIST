@@ -7,6 +7,7 @@ export default function List(props){
         // Or just use .find method to find the object 
         props.setToggleSubmit(true)
         props.setEdit(val.id)
+        var edit = document.getElementById
     }
     const elements = props.todo.map(x =>
         <li>

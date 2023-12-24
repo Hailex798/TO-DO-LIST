@@ -6,7 +6,11 @@
 }
 
 body {
-  background: #fc6602;
+  background: #fd6a13;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: hsl(200, 100%, 90%);
   max-width: 580px;
   /* padding: 1rem; */
@@ -15,7 +19,8 @@ body {
 .nav--heading{
   font-family: 'Oswald', sans-serif;
   text-align: center;
-  color: #fbe5b8;
+  /* color: #fbe5b8; */
+  color: white;
   font-size: 3em;
 }
 .nav hr{
@@ -33,6 +38,7 @@ body {
   flex-direction: column;
   gap: 0.1rem;
   margin-bottom: -6px;
+  color: white;
 }
 .btn {
   background: #1f1f1f;
@@ -92,6 +98,7 @@ body {
 
 .list li:has(input:checked) label {
   color: #fbe5b8;
+  text-decoration: line-through;
 }
 
 .list {
@@ -167,4 +174,12 @@ body {
 
 .list li:has(input:checked) label:hover::before {
   background: hsl(200, 100%, 30%);
+}
+
+.edit{
+  color: red;
+}
+input[type=checkbox]:checked + label {
+  color:red;
+  text-decoration: line-through;
 }
